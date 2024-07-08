@@ -4,6 +4,8 @@ import datetime
 import time
 import pytz
 import os
+from dotenv import load_dotenv
+load_dotenv()
 
 log_dir = "./logs"
 
@@ -45,8 +47,8 @@ def process_audio_data(indata, frames, time, status):
         log_file.write(log_entry)
 
 
-device_index = 1  # Replace with the actual device index
-duration = 5  # Duration in seconds
+device_index = int(os.getenv("DEVICE_INDEX", 1))
+duration = int(os.getenv("DURATION", 5))
 
 FORMAT = pyaudio.paInt16
 CHANNELS = 1
