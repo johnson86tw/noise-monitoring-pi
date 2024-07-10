@@ -40,7 +40,7 @@ def fetch_decibel(stream: pyaudio.Stream, callback):
     # Convert the RMS voltage to decibels (A-weighted)
     db_spl = voltage_to_db_spl(rms_voltage, V_94)
 
-    callback(db_spl)
+    callback(f"{db_spl:.1f}")
 
 
 def voltage_to_db_spl(v_rms, v_ref):

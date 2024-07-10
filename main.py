@@ -40,8 +40,9 @@ try:
     while time.time() - start_time < duration:
         try:
             fetch_decibel(stream, write_data_to_csv)
-        except Exception as e:
-            print(f"Error: {e}", flush=True)
+        except KeyboardInterrupt:
+            print("\nScript interrupted.")
+
 except Exception as e:
     print(f"Failed to open stream: {e}", flush=True)
 finally:
