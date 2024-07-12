@@ -1,7 +1,5 @@
 import numpy as np
 import pyaudio
-from dotenv import load_dotenv
-load_dotenv()
 
 
 FORMAT = pyaudio.paInt16

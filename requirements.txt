@@ -1,0 +1,5 @@
+numpy==2.0.0
+PyAudio==0.2.14
+python-dotenv==1.0.1
+setuptools==70.3.0
+wheel==0.43.0
